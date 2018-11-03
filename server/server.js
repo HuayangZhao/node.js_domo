@@ -50,6 +50,15 @@ app.post('/addHero',(req,res)=>{
         res.send({status:200,mse:'ok'.message,data:null})
     })
 })
+// 根据Id获取英雄信息
+app.get('/getHero/:id',(req,res)=>{
+    const id = req.params.id
+    const sql = 'select * from hero where id=?'
+    coon.query(sql,id,(err,result)=>{
+        if(err) res.status(500).send({status:500,mse:err.message,data:null})
+        res.send({status:200,mse:'ok'.message,data:result})
+    })
+})
 // 调用端口号启动服务器
 app.listen(5000,()=>{
     console.log('Express server running at http://127.0.0.1:5000');
