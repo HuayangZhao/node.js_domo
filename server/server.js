@@ -59,6 +59,25 @@ app.get('/getHero/:id',(req,res)=>{
         res.send({status:200,mse:'ok'.message,data:result})
     })
 })
+// 根据Id更新英雄数据
+app.post('/updateHeero/:id',(req,res)=>{
+    const hero = req.body
+    const id = req.params.id
+    const sql = 'update hero set ? where id=?'
+    coon.query(sql,[hero,id],(err,result)=>{
+        if(err) res.status(500).send({status:500,mse:err.message,data:null})
+        res.send({status:200,mse:'ok'.message,data:ull})
+    })
+})
+// 根据Id软删除英雄数据
+app.get('/deleteHero/:id',(req,res)=>{
+    const id = req.params.id
+    const sql = 'update hero set isdel=1 where id=?'
+    coon.query(sql,id,(err,result)=>{
+        if(err) res.status(500).send({status:500,mse:err.message,data:null})
+        res.send({status:200,mse:'ok'.message,data:null})
+    })
+})
 // 调用端口号启动服务器
 app.listen(5000,()=>{
     console.log('Express server running at http://127.0.0.1:5000');
