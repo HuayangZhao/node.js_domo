@@ -11,6 +11,10 @@ const coon = mysql.createConnection({
     password:'root',
     database:'heros'
 })
+// 引入第三方中间件  body-parser
+const bodyParser = require('body-parser')
+// 注册中间件
+app.use(bodyParser.urlencoded({extended:false}))
 // 只要客户端请求根路径 就提示客户端请求后台服务器成功
 app.get('/',(req,res)=>{
     res.send('请求后台服务器成功!')
@@ -25,6 +29,27 @@ app.get('/getAllHero',(req,res)=>{
     })
 })
 
+// 插入新的英雄数据
+app.post('/addHero',(req,res)=>{
+    // 首先获取客户端传递过来的参数:name gender say 
+    const hero = req.body
+    // 创建时间就用服务器端时间 并把时间挂在英雄time属性上
+    const time = new Date()
+    let y = time.getFullYear()
+    // padStart(2,'0') 第一个参数是期望长度 第二个参数是不满足期望长度时用指定参数填充
+    let m = (time.getMonth()+1).toString().padStart(2,'0')
+    let d = time.getDate().toString().padStart(2,'0')
+    let h = time.getHours().toString().padStart(2,'0')
+    let mm = time.getMinutes().toString().padStart(2,'0')
+    let ss = time.getSeconds().toString().padStart(2,'0')
+    hero.time = `${y}-${m}-${d} ${h}:${mm}:${ss}`
+    // 调用coon.query 添加英雄
+    const sql = 'insert into hero set ?'
+    coon.query(sql, hero,(err,hero,result)=>{
+        if(err) res.status(500).send({status:500,mse:err.message,data:null})
+        res.send({status:200,mse:'ok'.message,data:null})
+    })
+})
 // 调用端口号启动服务器
 app.listen(5000,()=>{
     console.log('Express server running at http://127.0.0.1:5000');
