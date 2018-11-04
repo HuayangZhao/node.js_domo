@@ -32,19 +32,19 @@ Node.js对数据库基本操作   前后端分离 模块化
 
 - 请求类型：POST
 - 请求地址：http://127.0.0.1:5000/addHero
-- 请求的参数：{ name, gender }
+- 请求的参数：{ name, gender,say }
 
 ####  根据Id获取英雄信息
 
 - 请求类型：get
-- 请求地址：http://127.0.0.1:5000//getHero/:id
+- 请求地址：http://127.0.0.1:5000/getHero/:id
 - 请求的参数：通过 URL 地址，把要查询的英雄Id，携带过去
 
 ####  根据Id更新英雄数据
 
 - 请求类型：POST
-- 请求地址：http://127.0.0.1:5000//getHero/:id
-- 请求的参数：{ name, gender }
+- 请求地址：http://127.0.0.1:5000/updateHero/:id
+- 请求的参数：{ name, gender,say }
 
 ####  根据Id软删除英雄数据
 

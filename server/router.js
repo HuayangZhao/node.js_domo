@@ -12,7 +12,7 @@ router.post('/addHero',ctrl.addHero)
 // 根据Id获取英雄信息
 router.get('/getHero/:id',ctrl.getHero)
 // 根据Id更新英雄数据
-router.post('/updateHeero/:id',ctrl.updateHeero)
+router.post('/updateHero/:id',ctrl.updateHero)
 // 根据Id软删除英雄数据
 router.get('/deleteHero/:id',ctrl.deleteHero)
 module.exports = router

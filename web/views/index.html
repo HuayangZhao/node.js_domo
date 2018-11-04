@@ -2,103 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Title</title>
     <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
     <link rel="stylesheet" href="./index.css">
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="/semantic/dist/semantic.min.js"></script>   
-    <script src="./index.js"></script>   
+    <script src="/node_modules/art-template/lib/template-web.js"></script>
+    <script src="/semantic/dist/semantic.min.js"></script>
+    <script src="./index.js"></script>
 </head>
 <body>
-    <div class="navBox">
-            <div class="ui styled accordion">
-                    <div class="title"><i class="dropdown icon"></i> Level 1 </div>
-                    <div class="content">欢迎来到第一关 <div class="accordion transition hidden">
-                        <div class="title"><i class="dropdown icon"></i> Level 1A </div>
-                        <div class="content">
-                          <p class="transition hidden">Level 2A 內容</p>
-                          <div class="accordion transition hidden">
-                            <div class="title"><i class="dropdown icon"></i> Level 1A-A </div>
-                            <div class="content">Level 2A-A 內容 </div>
-                            <div class="title"><i class="dropdown icon"></i> Level 1A-B </div>
-                            <div class="content">Level 1A-B 內容 </div>
-                          </div>
-                        </div>
-                        <div class="title"><i class="dropdown icon"></i> Level 1B </div>
-                        <div class="content">Level 1B 內容 </div>
-                        <div class="title"><i class="dropdown icon"></i> Level 1C </div>
-                        <div class="content">Level 1C 內容 </div>
-                      </div>
-                    </div>
-                    <div class="title"><i class="dropdown icon"></i> Level 2 </div>
-                    <div class="content">
-                      <p class="transition hidden">欢迎来到第二关</p>
-                      <div class="accordion transition hidden">
-                        <div class="active title"><i class="dropdown icon"></i> Level 2A </div>
-                        <div class="active content">
-                          <p>Level 2A 內容</p>
-                          <div class="accordion">
-                            <div class="title"><i class="dropdown icon"></i> Level 2A-A </div>
-                            <div class="content">Level 2A-A 內容 </div>
-                            <div class="title"><i class="dropdown icon"></i> Level 2A-B </div>
-                            <div class="content">Level 2A-B 內容 </div>
-                          </div>
-                        </div>
-                        <div class="title"><i class="dropdown icon"></i> Level 2B </div>
-                        <div class="content">Level 2B 內容 </div>
-                        <div class="title"><i class="dropdown icon"></i> Level 2C </div>
-                        <div class="content">Level 2C 内容 </div>
-                      </div>
-                    </div>
+    <!-- <div class="navBox">
+        <div class="ui styled accordion">
+            <div class="title"><i class="dropdown icon"></i> Level 1 </div>
+            <div class="content">欢迎来到第一关 <div class="accordion transition hidden">
+                <div class="title"><i class="dropdown icon"></i> Level 1A </div>
+                <div class="content">
+                  <p class="transition hidden">Level 2A 內容</p>
+                  <div class="accordion transition hidden">
+                    <div class="title"><i class="dropdown icon"></i> Level 1A-A </div>
+                    <div class="content">Level 2A-A 內容 </div>
+                    <div class="title"><i class="dropdown icon"></i> Level 1A-B </div>
+                    <div class="content">Level 1A-B 內容 </div>
                   </div>
-    </div>
+                </div>
+                <div class="title"><i class="dropdown icon"></i> Level 1B </div>
+                <div class="content">Level 1B 內容 </div>
+                <div class="title"><i class="dropdown icon"></i> Level 1C </div>
+                <div class="content">Level 1C 內容 </div>
+              </div>
+            </div>
+            <div class="title"><i class="dropdown icon"></i> Level 2 </div>
+            <div class="content">
+              <p class="transition hidden">欢迎来到第二关</p>
+              <div class="accordion transition hidden">
+                <div class="active title"><i class="dropdown icon"></i> Level 2A </div>
+                <div class="active content">
+                  <p>Level 2A 內容</p>
+                  <div class="accordion">
+                    <div class="title"><i class="dropdown icon"></i> Level 2A-A </div>
+                    <div class="content">Level 2A-A 內容 </div>
+                    <div class="title"><i class="dropdown icon"></i> Level 2A-B </div>
+                    <div class="content">Level 2A-B 內容 </div>
+                  </div>
+                </div>
+                <div class="title"><i class="dropdown icon"></i> Level 2B </div>
+                <div class="content">Level 2B 內容 </div>
+                <div class="title"><i class="dropdown icon"></i> Level 2C </div>
+                <div class="content">Level 2C 内容 </div>
+              </div>
+            </div>
+          </div>
+    </div> -->
     <div class="content">
-            <h1>英雄列表</h1>
-            <table class="ui celled table">
-                <thead>
-                  <tr><th>标题</th>
-                  <th>标题</th>
-                  <th>标题</th>
-                </tr></thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="ui ribbon label">First</div>
-                    </td>
-                    <td>Cell</td>
-                    <td>Cell</td>
-                  </tr>
-                  <tr>
-                    <td>Cell</td>
-                    <td>Cell</td>
-                    <td>Cell</td>
-                  </tr>
-                  <tr>
-                    <td>Cell</td>
-                    <td>Cell</td>
-                    <td>Cell</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr><th colspan="3">
-                    <div class="ui right floated pagination menu">
-                      <a class="icon item">
-                        <i class="left chevron icon"></i>
-                      </a>
-                      <a class="item">1</a>
-                      <a class="item">2</a>
-                      <a class="item">3</a>
-                      <a class="item">4</a>
-                      <a class="icon item">
-                        <i class="right chevron icon"></i>
-                      </a>
-                    </div>
-                  </th>
-                </tr></tfoot>
-              </table>
+        <h1>英雄列表</h1>
+        <table class="ui celled table">
+            <thead>
+                <tr>
+                    <th>序列号</th>
+                    <th>英雄名称</th>
+                    <th>性别</th>
+                    <th>台词</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+              
+            </tbody>
+        </table>
+        <div class="ui modal">
+           
+        </div>
     </div>
-    
+    <script type="text/template" id="heroList">
+        {{each data}}
+            <tr>
+                <td>
+                  <div class="ui ribbon label {{$value.isdel=='1'? 'red':'blue'}}">{{$value.isdel=='1' ? '禁用':'正常'}}</div>
+                  {{$value.id}}
+                </td>
+                <td>{{$value.name}}</td>
+                <td>{{$value.gender}}</td>
+                <td>{{$value.say}}</td>
+                <td>{{$value.time}}</td>
+                <td>
+                    <a href="javascript:;" class="edit" data-id =" {{$value.id}}">编辑</a>
+                    <a href="javascript:;" class="del" data-id =" {{$value.id}}">删除</a>
+                </td>
+            </tr>
+              {{/each}}
+    </script>
+    <script type="text/template" id="getHero">
+        <form class="ui form">
+                <div class="field">
+                    <label>姓名</label>
+                    <input type="text" name="name" placeholder="请填写英雄姓名" value="{{data[0].name}}">
+                </div>
+                <div class="field">
+                    <label>性别</label>
+                    <input type="text" name="gender" placeholder="请填写英雄性别" value="{{data[0].gender}}">
+                </div>
+                <div class="field">
+                    <label>台词</label>
+                    <input type="text" name="say" placeholder="请填写英雄台词" value="{{data[0].say}}">
+                </div>
+                <div class="field">
+                        <label>状态</label>
+                        <select class="form-control" id="numbers">
+                            <option value="2" selected>请选择英雄状态</option>
+                            <option value="1">禁用</option>
+                            <option value="0">启用</option>
+                        </select>
+                    </div>
+                <button class="ui button" type="button" data-id="{{data[0].id}}" data-isdel="{{data[0].isdel}}">提交</button>
+            </form>
+    </script>
 </body>
 </html>

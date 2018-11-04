@@ -49,15 +49,25 @@ module.exports = {
             res.send({status:200,mse:'ok'.message,data:result})
         })
     },
-    updateHeero:(req,res)=>{
-        const hero = req.body
+    // updateHero:(req,res)=>{
+    //     const hero = req.body
+    //     const id = req.params.id
+    //     const sql = 'update hero set ? where id=?'
+    //     coon.query(sql,[hero,id],(err,result)=>{
+    //         if(err) res.status(500).send({status:500,mse:err.message,data:null})
+    //         res.send({status:200,mse:'ok'.message,data:ull})
+    //     })
+    // },
+    updateHero: (req, res) => {
         const id = req.params.id
+        const newInfo = req.body
         const sql = 'update hero set ? where id=?'
-        coon.query(sql,[hero,id],(err,result)=>{
-            if(err) res.status(500).send({status:500,mse:err.message,data:null})
-            res.send({status:200,mse:'ok'.message,data:ull})
+        coon.query(sql, [newInfo, id], (err, result) => {
+          if (err) return res.send({ status: 500, msg: err.message, data: null })
+          res.send({ status: 200, msg: 'ok', data: null })
         })
-    },
+      },
+      
     deleteHero:(req,res)=>{
         const id = req.params.id
         const sql = 'update hero set isdel=1 where id=?'

@@ -1,0 +1,13 @@
+body {
+    padding: 30px;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+.modal {
+    padding: 40px;
+}
+.modal .form .field {
+    margin-bottom: 30px;
+}
