@@ -16,6 +16,7 @@ Node.js对数据库基本操作   前后端分离 模块化
 |  id       |      int     | 主键Id（自增）  |
 |  name |   varchar |  英雄名称  |
 |  gender  |   varchar |  性别     |
+|  say  |   varchar |  台词     |
 |  ctime   |   varchar |创建时间  |
 |  isdel   | tinyint（布尔值） | 是否被删除 0 表示未删除；1 表示已经被删除 |
 
@@ -48,10 +49,9 @@ Node.js对数据库基本操作   前后端分离 模块化
 ####  根据Id软删除英雄数据
 
 请求类型：GET
-
 请求地址：http://127.0.0.1:5000/deletehero/:id
-
 请求参数：通过 URL 地址栏传参，把 要删除的英雄Id提交给服务器
+
 
 
 
