@@ -54,30 +54,30 @@ Node.js对数据库基本操作   前后端分离 模块化
 
 
 ##  前台Demo结构
-│──.gitignore        				//git忽略文件
-│		
-│──heros.sql        				//sql数据
-│		
-│──README.md        				//说明文档
-│  		
-├─server            				//后台文件夹
-│      controller.js       			//功能模块
-│      package-lock.json   			
-│      package.json        			//后台包信息
-│      router.js           			//路由模块
-│      server.js           			//启动后台
-│       		
-└─web
-    │  package-lock.json   			    
-    │  package.json        			//前台包信息
-    │  web.js              			//前台接口
+    │──.gitignore        				//git忽略文件
+    │		
+    │──heros.sql        				//sql数据
+    │		
+    │──README.md        				//说明文档
     │  		
-    ├─semantic            			//semantic-ui框架
-    │   		
-    │              		
-    └─views                			//前台页面
-            index.css   
-            index.html
-            index.js
+    ├─server            				//后台文件夹
+    │      controller.js       			//功能模块
+    │      package-lock.json   			
+    │      package.json        			//后台包信息
+    │      router.js           			//路由模块
+    │      server.js           			//启动后台
+    │       		
+    └─web
+        │  package-lock.json   			    
+        │  package.json        			//前台包信息
+        │  web.js              			//前台接口
+        │  		
+        ├─semantic            			//semantic-ui框架
+        │   		
+        │              		
+        └─views                			//前台页面
+                index.css   
+                index.html
+                index.js
 
 
