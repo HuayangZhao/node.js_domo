@@ -9,7 +9,7 @@ Node.js对数据库基本操作   前后端分离 模块化
 4. 前端项目 Jquery + art-template + Semantic UI
 
 
-## 数据库设计 - hero
+## 数据库 - hero
 
 | 字段名 | 字段类型 |  字段描述  |
 |--------|-----------|------------|
@@ -52,5 +52,32 @@ Node.js对数据库基本操作   前后端分离 模块化
 请求地址：http://127.0.0.1:5000/deletehero/:id
 请求参数：通过 URL 地址栏传参，把 要删除的英雄Id提交给服务器
 
+
+##  前台Demo结构
+│──.gitignore        				//git忽略文件
+│		
+│──heros.sql        				//sql数据
+│		
+│──README.md        				//说明文档
+│  		
+├─server            				//后台文件夹
+│      controller.js       			//功能模块
+│      package-lock.json   			
+│      package.json        			//后台包信息
+│      router.js           			//路由模块
+│      server.js           			//启动后台
+│       		
+└─web
+    │  package-lock.json   			    
+    │  package.json        			//前台包信息
+    │  web.js              			//前台接口
+    │  		
+    ├─semantic            			//semantic-ui框架
+    │   		
+    │              		
+    └─views                			//前台页面
+            index.css   
+            index.html
+            index.js
 
 
