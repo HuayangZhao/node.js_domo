@@ -53,7 +53,7 @@ Node.js对数据库基本操作   前后端分离 模块化
 请求参数：通过 URL 地址栏传参，把 要删除的英雄Id提交给服务器
 
 
-##  前台Demo结构
+##  Demo结构
     │──.gitignore        				//git忽略文件
     │		
     │──heros.sql        				//sql数据
