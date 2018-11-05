@@ -55,6 +55,7 @@
     </div> -->
     <div class="content">
         <h1>英雄列表</h1>
+        <button class="ui primary button addHero">添加英雄 </button>
         <table class="ui celled table">
             <thead>
                 <tr>
@@ -99,25 +100,25 @@
         <form class="ui form">
                 <div class="field">
                     <label>姓名</label>
-                    <input type="text" name="name" placeholder="请填写英雄姓名" value="{{data[0].name}}">
+                    <input type="text" name="name" placeholder="请填写英雄姓名" value="{{name}}">
                 </div>
                 <div class="field">
                     <label>性别</label>
-                    <input type="text" name="gender" placeholder="请填写英雄性别" value="{{data[0].gender}}">
+                    <input type="text" name="gender" placeholder="请填写英雄性别" value="{{gender}}">
                 </div>
                 <div class="field">
                     <label>台词</label>
-                    <input type="text" name="say" placeholder="请填写英雄台词" value="{{data[0].say}}">
+                    <input type="text" name="say" placeholder="请填写英雄台词" value="{{say}}">
                 </div>
                 <div class="field">
-                        <label>状态</label>
-                        <select class="form-control" id="numbers">
-                            <option value="2" selected>请选择英雄状态</option>
-                            <option value="1">禁用</option>
-                            <option value="0">启用</option>
-                        </select>
-                    </div>
-                <button class="ui button" type="button" data-id="{{data[0].id}}" data-isdel="{{data[0].isdel}}">提交</button>
+                    <label>状态</label>
+                    <select class="form-control" id="numbers">
+                        <option value="2" selected class="selected">请选择英雄状态</option>
+                        <option value="1">禁用</option>
+                        <option value="0">启用</option>
+                    </select>
+                </div>
+                <button class="ui button" type="button" data-id="{{id}}" data-isdel="{{isdel}}">提交</button>
             </form>
     </script>
 </body>
